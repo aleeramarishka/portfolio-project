@@ -1,6 +1,8 @@
 
 <!doctype html>
 <html lang="en">
+  {% load staticfiles %}
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,15 +26,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="#">Blog</a>
-            <a class="nav-item nav-link" href="#">Twitter</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
+            <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
+            <a class="nav-item nav-link" href="">Twitter</a>
+            <a class="nav-item nav-link" href="{% static 'resume_samp.pdf' %}">Resume</a>
             
           </div>
         </div>
       </nav>
   </header>
-
+    
 <main role="main">
 
   <section class="jumbotron text-center">
@@ -41,7 +43,8 @@
       <p class="lead text-muted">Hi, I'm EJ and this branch of EJProductions™ is for webpage design and handling request.</p>
       <p>
         <a href="mailto:marishka@outlook.ph" class="btn btn-primary my-2">Email Me</a>
-        
+        <br />
+        <img class="img-fluid" src="{% static 'ej.jpg' %}" height="300" width="400" />
       </p>
     </div>
   </section>
